@@ -1,9 +1,13 @@
-<?php get_header(); ?>
-	<div id="content" class="cf">
-		  <?php
-		  if (have_posts()) :
-		   		get_template_part('loop');
-				?><div class="navigation g3 cf"><p><?php posts_nav_link(); ?></p></div>
-	  	  <?php endif;  ?>
-	</div> 
+<?php get_header();?>
+<div>
+    <section>
+    <div class="blog-content">
+				<h1><?php the_title();?></h1>
+
+				<div>
+					<?php the_content(); ?>
+				</div>
+			</div>
+    </section>
+</div>
 <?php get_footer(); ?>

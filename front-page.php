@@ -4,7 +4,7 @@
 
 
         <?php if( have_rows('content') ): ?>
-        <!-- Checking for Page flexible content-->
+        <!-- Checking for Page flexible content -->
         <?php while( have_rows('content') ): the_row(); ?>
         <!-- Checking If Flexible Content has rows | If True - start Switch, in other case just return message -->
         <?php 

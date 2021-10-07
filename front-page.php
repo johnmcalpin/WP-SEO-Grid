@@ -42,7 +42,7 @@
             <?php if( get_sub_field('background_color') ): ?>style="background-color:<?php the_sub_field('background_color'); ?>"
             <?php endif; ?>>
             <div class="grid-item">
-                <img width="150px" height="150px" src="<?php the_sub_field('image_left'); ?>"> </div>
+                <img src="<?php the_sub_field('image_left'); ?>"> </div>
                 <div class="grid-item">
                 <?php the_sub_field('text_right'); ?>
             </div>

@@ -1,0 +1,17 @@
+
+SEO Grid is a free WordPress theme built by John McAlpin (https://www.johnmcalpin.com) with the intent to provide a blank framework for any SEOs or web developers. This theme is created to be fluid, meaning fully responsive for any device viewport. For theme suggestions, feel free to add an issue to Github and the author may look into viability. There are no guarantees of any issues or requests being fulfilled. 
+
+Copyright (C) 2021  John McAlpin
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

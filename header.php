@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <?php wp_head(); ?>
+	<?php the_field('insert_head'); ?>
+	<?php the_field('insert_head', 'option'); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<?php the_field('insert_body', 'option'); ?>
     <header id="branding" class="cf" style="background-image: url(<?php the_field('background_image'); ?>); background-repeat: no-repeat, repeat; background-position: center;">
         <?php if ( has_nav_menu( 'header-menu' ) ) { ?>
             <div class="navgrid">

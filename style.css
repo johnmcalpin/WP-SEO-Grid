@@ -326,7 +326,7 @@ body {
 
 h1 {
 	margin: 0 0 .5em;
-	font-size: 2.5em;
+	font-size: 3em
 }
 
 h2 {
@@ -334,12 +334,7 @@ h2 {
 	font-size: 2.25em
 }
 
-h3 {
-	margin: 0 0 1em;
-	font-size: 1.75em
-}
-
-h4 {
+h3, h4 {
 	margin: 0 0 1em;
 	font-size: 1.5em
 }
@@ -354,7 +349,6 @@ h6 {
 	margin: 0 0 1.3333333333333333333333333333333em;
 	font-size: 1.125em
 }
-
 
 .sticky, address, blockquote, code, dd, dl, kbd, label, ol, p, pre, q, samp, tt, ul {
 	margin: 0 0 1.5em;
@@ -866,12 +860,12 @@ nav label, .menu-item {
 	}
 	h2 {
 		margin: 0 0 .5em;
-		font-size: 1.75em;
+		font-size: 2em;
 		line-height: 1em
 	}
 	h3 {
 		margin: 0 0 .6667em;
-		font-size: 2.25em;
+		font-size: 1.75em;
 		line-height: 1.3333333333333333333333333333333em
 	}
 	.alignright {

@@ -12,7 +12,7 @@
 
 <body <?php body_class(); ?>>
 	<?php the_field('insert_body', 'option'); ?>
-    <header id="branding" class="cf" style="background-image: url(<?php the_field('background_image'); ?>); background-repeat: no-repeat, repeat; background-position: center;">
+    <header id="branding" class="cf" <?php if( get_field('background_image') ): ?> style="background-image: url(<?php the_field('background_image'); ?>); background-repeat: no-repeat, repeat; background-position: center right; background-size: 100%" <?php else: ?> style="background: #1e3e59d4" <?php endif; ?>>
         <?php if ( has_nav_menu( 'header-menu' ) ) { ?>
             <div class="navgrid">
             <div class="navlogo"> <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img width="50px" height="50px" src="<?php the_field('logo', 'option'); ?>"></a></div>

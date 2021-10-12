@@ -1,8 +1,6 @@
 <?php get_header();?>
 <div>
     <section>
-
-
         <?php if( have_rows('content') ): ?>
         <!-- Checking for Page flexible content -->
         <?php while( have_rows('content') ): the_row(); ?>

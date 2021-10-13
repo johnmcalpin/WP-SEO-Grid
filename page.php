@@ -32,6 +32,23 @@
                 </div>
             </div>
             </section>
+
+            <?php 
+
+        //Multi-Column Layout
+        elseif( get_row_layout() == 'multi_column_repeater' ): ?>
+<section class="auto-grid">
+    <?php
+				// Check rows exists.
+				if( have_rows('content_column') ): ?>
+    <?php while( have_rows('content_column') ) : the_row(); ?>
+    <div class="grid-item">
+        <?php the_sub_field('the_content'); ?>
+    </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
+</section>
+
         <?php 
 
         //Left Image & Text

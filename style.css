@@ -9,7 +9,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
 /*
-	Flexible auto grid will created even spacing between grid items until it reaches the end of the column and then it will auto wrap into a new row.
+Flexible auto grid will created even spacing between grid items until it reaches the end of the column and then it will auto wrap into a new row. Some media queries use this at the bottom of this file.
   */
 
 .auto-grid {
@@ -25,6 +25,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	font-size: 1.2rem;
 }
 
+/* Navigation Grid - Ensures fluid layout amongst all device types. Some media queries use this at the bottom of this file. */
 .navgrid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,6 +44,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	grid-row: 1/2;
 }
 
+/* This section manages the hero section on pages and ensures fluid layout amongst all device types. Some media queries use this at the bottom of this file. */
 .hero-section {
 	margin: 0 2em;
 	width: 35%;
@@ -50,26 +52,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	grid-row: 2/3;
 }
 
-section {
-	width: 100%;
-	margin: auto;
-}
-
-footer {
-	width: 100%;
-}
-
-.inner-footer {
-	padding: 2em;
-}
-
 header {
 	width: 100%
-}
-
-.hero-section {
-	margin: 0 2em;
-	width: 90%;
 }
 
 .hero-h1, .hero-intro {
@@ -81,24 +65,44 @@ header {
 	line-height: 1.2em;
 }
 
+/* This is the main outer wrapper that controls each row and ensures fluidity */
+section {
+	width: 100%;
+	margin: auto;
+}
+
+/* Footer styling*/
+footer {
+	width: 100%;
+}
+
+.inner-footer {
+	padding: 2em;
+}
+
+/* General Page and Element Styling */
+
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+	font-size: 100%;
+	overflow-y: scroll
 }
 
 body {
-	margin: 0
+	width: 100%;
+	min-height: 100%;
+	font-smooth: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	margin: 0 auto
 }
 
 article, aside, footer, header, nav, section {
 	display: block
-}
-
-h1 {
-	font-size: 2em;
-	margin: .67em 0
 }
 
 figcaption, figure, main {
@@ -310,19 +314,6 @@ h2, h6 {
 fieldset, form, hr, img, menu, table {
 	margin: 0 0 1.5em;
 	padding: 0
-}
-
-html {
-	height: 100%;
-	font-size: 100%;
-	overflow-y: scroll
-}
-
-body {
-	min-height: 100%;
-	font-smooth: antialiased;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased
 }
 
 h1 {
@@ -712,11 +703,6 @@ del {
 	text-shadow: none
 }
 
-body {
-	width: 100%;
-	margin: 0 auto
-}
-
 .g1, .g2, .g3 {
 	display: block;
 	position: relative;
@@ -740,7 +726,7 @@ body {
 	height: auto;
 }
 
-/* menu */
+/* MENU */
 
 .sf-menu a {
 	color: rgb(66, 66, 66);
@@ -758,7 +744,7 @@ nav label, .menu-item {
 	color: rgb(66, 66, 66);
 }
 
-/* MOBILE */
+/* RESPONSIVE STYLING */
 
 @media only screen and (min-width: 320px) {
 	.navgrid {
@@ -984,6 +970,7 @@ nav label, .menu-item {
 	}
 }
 
+/* USED FOR PRINT PREVIEW */
 @media print {
 	* {
 		background: transparent!important;

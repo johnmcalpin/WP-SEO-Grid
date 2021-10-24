@@ -25,6 +25,10 @@ Flexible auto grid will created even spacing between grid items until it reaches
 	font-size: 1.2rem;
 }
 
+.grid-item.blog {
+    max-width: fit-content;
+}
+
 /* Navigation Grid - Ensures fluid layout amongst all device types. Some media queries use this at the bottom of this file. */
 .navgrid {
 	display: grid;
@@ -267,6 +271,10 @@ textarea {
 ::-webkit-file-upload-button {
 	-webkit-appearance: button;
 	font: inherit
+}
+
+p.details {
+    font-style: italic;
 }
 
 details, menu {

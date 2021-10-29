@@ -15,7 +15,7 @@
             <div class="grid-item">
                 <?php the_sub_field('content'); ?>
             </div>
-            </section>
+        </section>
 
         <?php 
 
@@ -25,15 +25,15 @@
             <?php if( get_sub_field('background_color') ): ?>style="background-color:<?php the_sub_field('background_color'); ?>"
             <?php endif; ?>>
             <div class="grid-item">
-                    <?php the_sub_field('left_column_content'); ?>
+                <?php the_sub_field('left_column_content'); ?>
             </div>
-                    <div class="grid-item">
-                    <?php the_sub_field('right_column_content'); ?>
-                </div>
+            <div class="grid-item">
+                <?php the_sub_field('right_column_content'); ?>
             </div>
-            </section>
+</div>
+</section>
 
-            <?php 
+<?php 
 
         //Multi-Column Layout
         elseif( get_row_layout() == 'multi_column_repeater' ): ?>
@@ -49,23 +49,24 @@
     <?php endif; ?>
 </section>
 
-        <?php 
+<?php 
 
         //Left Image & Text
         elseif( get_row_layout() == 'left_image_text' ): ?>
-     <section class="auto-grid"
-            <?php if( get_sub_field('background_color') ): ?>style="background-color:<?php the_sub_field('background_color'); ?>"
-            <?php endif; ?>>
-            <div class="grid-item">
-                <img src="<?php the_sub_field('image_left'); ?>"> </div>
-                <div class="grid-item">
-                <?php the_sub_field('text_right'); ?>
-            </div>
-            </section>
+<section class="auto-grid"
+    <?php if( get_sub_field('background_color') ): ?>style="background-color:<?php the_sub_field('background_color'); ?>"
+    <?php endif; ?>>
+    <div class="grid-item">
+        <img src="<?php the_sub_field('image_left'); ?>">
+    </div>
+    <div class="grid-item">
+        <?php the_sub_field('text_right'); ?>
+    </div>
+</section>
 
-        <?php endif; ?>
-        <?php endwhile; ?>
-        <?php endif; ?>
-    </section>
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
+</section>
 </div>
 <?php get_footer(); ?>

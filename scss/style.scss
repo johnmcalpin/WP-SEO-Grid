@@ -1,0 +1,19 @@
+/*
+Theme Name: SEO Grid
+Author: John McAlpin
+Author URI: https://www.johnmcalpin.com/
+Contributors: Sabrina Matthews
+Description: SEO Grid is a free WordPress theme built by John McAlpin (https://www.johnmcalpin.com) with the intent to provide a blank framework for any SEOs or web developers. This theme is created to be fluid, meaning fully responsive for any device viewport. For theme suggestions, feel free to add an issue to Github and the author may look into viability. There are no guarantees of any issues or requests being fulfilled. 
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*
+	Flexible auto grid will created even spacing between grid items until it reaches the end of the column and then it will auto wrap into a new row.
+  */
+  @import '_variables';
+  @import '_media-queries'; 
+  @import '_normalize'; 
+  @import '_grid'; 
+  @import '_header'; 
+  @import '_footer';

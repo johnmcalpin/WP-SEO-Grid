@@ -1,0 +1,1 @@
+SEO Grid uses SCSS to help organize CSS across the site. If you're unfamiliar with SCSS, you may delete this folder and use style.CSS instead. 

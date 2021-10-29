@@ -1,0 +1,215 @@
+/* NAVIGATION MENU WRAPPER */
+header {
+    font-size: 3vw;
+    @include tablet {
+        font-size: 1em;
+    }
+}
+
+nav input + div > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: inherit;
+    list-style: none;
+}
+.hero {
+    .section {
+        margin: 0 2em;
+        width: 35%;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 1em;
+    }
+    h1 {
+        color: $white;
+        font-size: 2.75em;
+        line-height: 1.2em;
+    }
+    .intro {
+        color: $white;
+    }
+}
+.menu-item {
+    font-size: 1.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include desktop {
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &.menu-item-has-children {
+            &:hover {
+                .sub-menu {
+                    display: block;
+                    position: absolute;
+                    background: $tertiary;
+                    padding: 0em 0.75em;
+                    font-size: 1.25em;
+                    top: 4em;
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+@include desktop {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.85em;
+    margin: 0 0.5em;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.sub-menu {
+    margin-top: 0.75em;
+    padding-left: 0.75em;
+    @include desktop {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    .menu-item {
+        font-size: 0.75em;
+        text-transform: initial;
+        font-weight: 500;
+        padding: 0.5em 1em;
+    }
+    li:hover {
+        background-image: linear-gradient(to bottom, #0081c2, #0077b3);
+        padding: 0.5em 1em;
+    }
+}
+li {
+    padding: 0.5em 0;
+    a {
+        color: $white;
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+.nav {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: 1fr;
+        align-items: start;
+    }
+    .logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 10px;
+        height: 75px;
+        width: 75px;
+    }
+    .menu {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        height: 3em;
+        margin-bottom: 1.5em;
+        width: 100% !important;
+        padding: 1em 0;
+    }
+    .sf-menu li a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    label {
+        color: $white;
+        display: block;
+        position: relative;
+        width: 2.5em;
+        height: 0.15em;
+        top: 0.1em;
+        background-color: currentColor;
+        @include tablet {
+            display: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 1em;
+            width: 2.5em;
+            height: 0.15em;
+            background-color: currentColor;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 2em;
+            width: 2.5em;
+            height: 0.15em;
+            background-color: currentColor;
+        }
+    }
+
+    input:checked + div {
+        height: auto;
+    }
+
+    input:checked + div > ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background: #000000c2;
+        padding: 1em;
+        right: 0;
+
+        li {
+            padding: 1em;
+        }
+    }
+}
+//MOBILE NAVIGATION SETTINGS
+@include mobile {
+    nav {
+        input + div > ul {
+            display: none;
+        }
+        input:checked + div > ul {
+            width: -webkit-fill-available;
+            background: $blacktransperent;
+            text-align: center;
+            list-style: none;
+            top: 9em;
+            z-index: 1;
+        }
+    }
+    .menu-item {
+        font-size: 2em;
+    }
+    .nav input:checked + div > ul li {
+        padding: 1em;
+        list-style: none;
+    }
+    #access {
+        position: relative;
+        width: 10em;
+        top: 1em;
+        right: 1em;
+    }
+    .hero {
+        .section {
+            margin: 0 2em;
+            width: 90%;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding: 1em;
+        }
+    }
+}
